@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Luz Interior</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1e6adf7f3e.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #fff;
+      padding: 20px 60px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      color: #4CAF50;
+      font-size: 24px;
+    }
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #4CAF50;
+    }
+    .hero {
+      background: linear-gradient(to right, #4CAF50, #81C784);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeIn 2.5s ease;
+    }
+    .section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h3 {
+      color: #4CAF50;
+      margin-bottom: 20px;
+      font-size: 32px;
+      text-align: center;
+    }
+    .section p, .section ul {
+      margin-bottom: 20px;
+      line-height: 1.7;
+      color: #555;
+      font-size: 16px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .depoimentos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .depoimento {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .depoimento:hover {
+      transform: translateY(-5px);
+    }
+    .depoimento p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .depoimento strong {
+      color: #333;
+    }
+    .timeline {
+      position: relative;
+      margin: 50px 0;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #4CAF50;
+    }
+    .event {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .event::before {
+      content: '';
+      position: absolute;
+      left: -3px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      background: #4CAF50;
+      border-radius: 50%;
+    }
+    .faq {
+      max-width: 800px;
+      margin: auto;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .faq-question {
+      background: #4CAF50;
+      color: white;
+      padding: 12px 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .faq-answer {
+      display: none;
+      padding: 10px 15px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-top: 5px;
+    }
+    .contato a {
+      color: #4CAF50;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+    .icons {
+      font-size: 50px;
+      color: #4CAF50;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      nav a {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Instituto Luz Interior</h1>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#valores">Missão</a>
+    <a href="#ebooks">Ebooks</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Fortalecendo sua Fé e Espiritualidade</h2>
+  <p>Transformamos vidas através do conhecimento espiritual e da fé, com conteúdos digitais que despertam sua melhor versão interior.</p>
+</section>
+
+<section id="sobre" class="section">
+  <h3>Sobre Nós</h3>
+  <div class="icons"><i class="fas fa-book-open"></i></div>
+  <p>O <strong>Instituto Luz Interior</strong> nasceu com a missão de levar fé, espiritualidade e autoconhecimento para quem busca uma vida mais leve, próspera e conectada com o divino.</p>
+  <p>Trabalhamos exclusivamente de forma online, oferecendo ebooks que ajudam milhares de pessoas a fortalecerem sua fé, encontrarem equilíbrio e viverem com mais propósito.</p>
+</section>
+
+<section id="valores" class="section">
+  <h3>Missão, Visão e Valores</h3>
+  <div class="icons"><i class="fas fa-heart"></i></div>
+  <p><strong>Missão:</strong> Proporcionar transformação espiritual, levando conhecimento, fé e esperança através de conteúdos digitais acessíveis.</p>
+  <p><strong>Visão:</strong> Ser reconhecida como referência no desenvolvimento espiritual e bem-estar interior, impactando milhares de vidas.</p>
+  <p><strong>Valores:</strong></p>
+  <ul>
+    <li>✔️ Fé e espiritualidade</li>
+    <li>✔️ Ética e transparência</li>
+    <li>✔️ Amor ao próximo</li>
+    <li>✔️ Comprometimento</li>
+    <li>✔️ Respeito às crenças e à diversidade</li>
+    <li>✔️ Transformação pessoal e coletiva</li>
+  </ul>
+</section>
+
+<section id="ebooks" class="section">
+  <h3>Nossos Ebooks</h3>
+  <div class="icons"><i class="fas fa-lightbulb"></i></div>
+  <p>Oferecemos ebooks cuidadosamente desenvolvidos, que trazem reflexões, práticas espirituais, orações, meditações e ensinamentos que auxiliam no fortalecimento da fé e da espiritualidade.</p>
+  <p>Nosso atendimento é personalizado e feito diretamente pelo WhatsApp, garantindo proximidade, clareza e acompanhamento em toda sua jornada.</p>
+</section>
+
+<section class="section">
+  <h3>Nossa História</h3>
+  <div class="timeline">
+    <div class="event">
+      <p><strong>2022:</strong> Início da missão com o primeiro ebook criado, ajudando amigos e familiares.</p>
+    </div>
+    <div class="event">
+      <p><strong>2023:</strong> Expansão dos conteúdos, atingindo centenas de pessoas em todo o Brasil.</p>
+    </div>
+    <div class="event">
+      <p><strong>2024:</strong> Criação do Instituto Luz Interior, formalizando a missão de transformar vidas.</p>
+    </div>
+    <div class="event">
+      <p><strong>2025:</strong> Mais de 2.000 vidas impactadas por nossos ebooks e conteúdos espirituais.</p>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos" class="section">
+  <h3>O Que Dizem Sobre Nós</h3>
+  <div class="depoimentos">
+    <div class="depoimento">
+      <p>"Comprei um dos ebooks e minha vida mudou. Me sinto muito mais conectada espiritualmente. Gratidão imensa pelo trabalho maravilhoso de vocês."</p>
+      <strong>— Ana Paula, RJ</strong>
+    </div>
+    <div class="depoimento">
+      <p>"Estava em um momento difícil, sem direção. O conteúdo que recebi me ajudou a encontrar forças na fé. Recomendo de olhos fechados."</p>
+      <strong>— Marcos Oliveira, SP</strong>
+    </div>
+    <div class="depoimento">
+      <p>"Simplesmente maravilhoso. A clareza dos ensinamentos me tocou profundamente. Recomendo para todos que buscam crescimento espiritual."</p>
+      <strong>— Juliana Freitas, MG</strong>
+    </div>
+    <div class="depoimento">
+      <p>"Parabéns pelo trabalho sério e honesto. Os ebooks são incríveis, me trouxeram paz e fortalecimento espiritual."</p>
+      <strong>— Roberto Silva, BA</strong>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <h3>Perguntas Frequentes (FAQ)</h3>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-question">📖 Como recebo meu ebook?</div>
+      <div class="faq-answer">Após a confirmação do pagamento, o ebook é enviado diretamente para seu WhatsApp.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">⏰ Em quanto tempo recebo?</div>
+      <div class="faq-answer">Em até 5 minutos após a confirmação do pagamento, você já recebe seu ebook.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">💳 Quais formas de pagamento?</div>
+      <div class="faq-answer">Pix, cartão de crédito e boleto.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">🔒 É seguro comprar?</div>
+      <div class="faq-answer">Totalmente seguro. Usamos plataformas confiáveis e todos os dados são protegidos.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="section contato">
+  <h3>Contato</h3>
+  <p>Estamos à disposição para esclarecimentos, dúvidas ou parcerias. Entre em contato através do e-mail:</p>
+  <p><a href="mailto:lepoldino2@gmail.com">lepoldino2@gmail.com</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Instituto Luz Interior. Todos os direitos reservados. | Contato: <a href="mailto:lepoldino2@gmail.com">lepoldino2@gmail.com</a></p>
+</footer>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-question');
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.nextElementSibling;
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
